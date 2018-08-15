@@ -18,8 +18,8 @@ accounts:
     regions: ["us-west-2"]
 
 credentialsDecryptionConfig:
-  enableDecryption: "true"
-  encryptionKey: "Test"
+  enableDecryption: "false"
+  encryptionKey: ""
 
 proxyConfig:
   host:
@@ -83,7 +83,7 @@ metricsConfig:
     # AWS will charge for enhanced metrics emitted from Kinesis.
     includeMetrics:
        - name: "PutMedia.Requests"
-         alias: "PutMedia Requests (Unit: count, StatType: sum)"
+         alias: "PutMedia Requests (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -91,7 +91,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.IncomingBytes"
-         alias: "PutMedia IncomingBytes (Unit: byte, StatType: sum)"
+         alias: "PutMedia IncomingBytes (Unit - byte; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -99,7 +99,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.IncomingFragments"
-         alias: "PutMedia IncomingFragments (Unit: count, StatType: sum)"
+         alias: "PutMedia IncomingFragments (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -107,7 +107,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.IncomingFrames"
-         alias: "PutMedia IncomingFrames (Unit: count, StatType: sum)"
+         alias: "PutMedia IncomingFrames (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -115,7 +115,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.ActiveConnections"
-         alias: "PutMedia ActiveConnections (Unit: count, StatType: sum)"
+         alias: "PutMedia ActiveConnections (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -123,7 +123,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.ConnectionErrors"
-         alias: "PutMedia ConnectionErrors (Unit: count, StatType: ave)"
+         alias: "PutMedia ConnectionErrors (Unit - count; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -131,7 +131,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.FragmentIngestionLatency"
-         alias: "PutMedia FragmentIngestionLatency (Unit: ms, StatType: ave)"
+         alias: "PutMedia FragmentIngestionLatency (Unit - ms; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -139,7 +139,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.FragmentPersistLatency"
-         alias: "PutMedia FragmentPersistLatency (Unit: ms, StatType: ave)"
+         alias: "PutMedia FragmentPersistLatency (Unit - ms; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -147,7 +147,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.Latency"
-         alias: "PutMedia Latency (Unit: ms, StatType: sum)"
+         alias: "PutMedia Latency (Unit - ms; StatType - sum)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -155,7 +155,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.BufferingAckLatency"
-         alias: "PutMedia BufferingAckLatency (Unit: ms, StatType: ave)"
+         alias: "PutMedia BufferingAckLatency (Unit - ms; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -163,7 +163,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.ReceivedAckLatency"
-         alias: "PutMedia ReceivedAckLatency (Unit: ms, StatType: ave)"
+         alias: "PutMedia ReceivedAckLatency (Unit - ms; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -171,7 +171,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.PersistedAckLatency"
-         alias: "PutMedia PersistedAckLatency(Unit: ms, StatType: ave)"
+         alias: "PutMedia PersistedAckLatency(Unit - ms; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -179,7 +179,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.ErrorAckCount"
-         alias: "PutMedia.ErrorAckCount (Unit: count, StatType: ave)"
+         alias: "PutMedia.ErrorAckCount (Unit - count; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -195,7 +195,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMedia.Requests"
-         alias: "GetMedia Requests (Unit: count, StatType: sum)"
+         alias: "GetMedia Requests (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -203,7 +203,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMedia.OutgoingBytes"
-         alias: "GetMedia OutgoingBytes (Unit: byte, StatType: sum)"
+         alias: "GetMedia OutgoingBytes (Unit - byte; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -211,7 +211,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMedia.OutgoingFragments"
-         alias: "GetMedia OutgoingFragments (Unit: count, StatType: sum)"
+         alias: "GetMedia OutgoingFragments (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -219,7 +219,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMedia.OutgoingFrames"
-         alias: "GetMedia.OutgoingFrames (Unit: count, StatType: sum)"
+         alias: "GetMedia.OutgoingFrames (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -227,7 +227,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMedia.MillisBehindNow"
-         alias: "GetMedia MillisBehindNow (Unit: ms, StatType: max)"
+         alias: "GetMedia MillisBehindNow (Unit - ms; StatType - max)"
          statType: "max"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -235,7 +235,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMedia.ConnectionErrors"
-         alias: "GetMedia ConnectionErrors (Unit: count, StatType: ave)"
+         alias: "GetMedia ConnectionErrors (Unit - count; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -251,7 +251,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMediaForFragmentList.OutgoingBytes"
-         alias: "GetMediaForFragmentList OutgoingBytes (Unit: byte, StatType: sum)"
+         alias: "GetMediaForFragmentList OutgoingBytes (Unit - byte; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -259,7 +259,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMediaForFragmentList.Requests"
-         alias: "GetMediaForFragmentList Requests (Unit: count, StatType: sum)"
+         alias: "GetMediaForFragmentList Requests (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -267,7 +267,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMediaForFragmentList.OutgoingFragments"
-         alias: "GetMediaForFragmentList OutgoingFragments(Unit: count, StatType: sum)"
+         alias: "GetMediaForFragmentList OutgoingFragments(Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -275,7 +275,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMediaForFragmentList.OutgoingFrames"
-         alias: "GetMediaForFragmentList OutgoingFrames (Unit: count, StatType: sum)"
+         alias: "GetMediaForFragmentList OutgoingFrames (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -291,7 +291,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "ListFragments.Latency"
-         alias: "ListFragments Latency (Unit: ms, StatType: ave)"
+         alias: "ListFragments Latency (Unit - ms; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -299,7 +299,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSStreamingSessionURL.Latency"
-         alias: "GetHLSStreamingSessionURL Latency (Unit: ms, StatType: ave)"
+         alias: "GetHLSStreamingSessionURL Latency (Unit - ms; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -307,7 +307,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSStreamingSessionURL.Requests"
-         alias: "GetHLSStreamingSessionURL Requests (Unit: count, StatType: sum)"
+         alias: "GetHLSStreamingSessionURL Requests (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -323,7 +323,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSMasterPlaylist.Latency"
-         alias: "GetHLSMasterPlaylist Latency (Unit: ms, StatType: ave)"
+         alias: "GetHLSMasterPlaylist Latency (Unit - ms; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -331,7 +331,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSMasterPlaylist.Requests"
-         alias: "GetHLSMasterPlaylist Requests (Unit: count, StatType: sum)"
+         alias: "GetHLSMasterPlaylist Requests (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -347,7 +347,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSMediaPlaylist.Latency"
-         alias: "GetHLSMediaPlaylist Latency (Unit: ms, StatType: ave)"
+         alias: "GetHLSMediaPlaylist Latency (Unit - ms; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -355,7 +355,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSMediaPlaylist.Requests"
-         alias: "GetHLSMediaPlaylist Requests (Unit: count, StatType: sum)"
+         alias: "GetHLSMediaPlaylist Requests (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -371,7 +371,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMP4InitFragment.Latency"
-         alias: "GetMP4InitFragment Latency (Unit: ms, StatType: ave)"
+         alias: "GetMP4InitFragment Latency (Unit - ms; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -379,7 +379,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMP4InitFragment.Requests"
-         alias: "GetMP4InitFragment Requests (Unit: count, StatType: sum)"
+         alias: "GetMP4InitFragment Requests (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -395,7 +395,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMP4MediaFragment.Latency"
-         alias: "GetMP4MediaFragment Latency (Unit: ms, StatType: ave)"
+         alias: "GetMP4MediaFragment Latency (Unit - ms; StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -403,7 +403,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMP4MediaFragment.Requests"
-         alias: "GetMP4MediaFragment Requests (Unit: count, StatType: sum)"
+         alias: "GetMP4MediaFragment Requests (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -419,7 +419,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMP4MediaFragment.OutgoingBytes"
-         alias: "GetMP4MediaFragment Outgoing Bytes (Unit: byte, StatType: sum)"
+         alias: "GetMP4MediaFragment Outgoing Bytes (Unit - byte; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"

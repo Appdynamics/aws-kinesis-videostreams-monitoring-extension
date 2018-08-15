@@ -51,7 +51,7 @@ public class KinesisVideoStreamsMetricsProcessor implements MetricsProcessor {
 
     @Override
     public List<AWSMetric> getMetrics(AmazonCloudWatch awsCloudWatch, String accountName, LongAdder awsRequestsCounter) {
-        final List<DimensionFilter> dimensionFilters = getDimensionFilters();
+        List<DimensionFilter> dimensionFilters = getDimensionFilters();
         MultiDimensionPredicate multiDimensionPredicate = new MultiDimensionPredicate(dimensions);
         return  MetricsProcessorHelper.getFilteredMetrics(awsCloudWatch, awsRequestsCounter, NAMESPACE,
                 includeMetrics, dimensionFilters, multiDimensionPredicate);
@@ -64,7 +64,7 @@ public class KinesisVideoStreamsMetricsProcessor implements MetricsProcessor {
 
     @Override
     public List<Metric> createMetricStatsMapForUpload(NamespaceMetricStatistics namespaceMetricStats) {
-        final Map<String, String> dimensionToMetricPathNameDictionary = new HashMap<>();
+        Map<String, String> dimensionToMetricPathNameDictionary = new HashMap<>();
         for (Dimension dimension : dimensions) {
             dimensionToMetricPathNameDictionary.put(dimension.getName(), dimension.getDisplayName());
         }
@@ -78,7 +78,7 @@ public class KinesisVideoStreamsMetricsProcessor implements MetricsProcessor {
     }
 
     private List<DimensionFilter> getDimensionFilters() {
-        final List<DimensionFilter> dimensionFilters = new ArrayList<>();
+        List<DimensionFilter> dimensionFilters = new ArrayList<>();
         for (Dimension dimension : dimensions) {
             DimensionFilter dimensionFilter = new DimensionFilter();
             dimensionFilter.withName(dimension.getName());

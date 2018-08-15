@@ -19,7 +19,7 @@ package com.appdynamics.extensions.aws.kinesis.videostreams.util;
  * Created by pradeep.nair on 8/7/18.
  * Stores defaults that are used throughout the project
  */
-public class Constants {
+public final class Constants {
     public static final String DEFAULT_METRIC_PREFIX = "Custom Metrics|AWS Kinesis Video Streams|";
     public static final String MONITOR_NAME = "KinesisVideoStreamsMonitor";
 }
