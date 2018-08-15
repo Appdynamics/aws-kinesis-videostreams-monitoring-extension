@@ -187,7 +187,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.Success"
-         alias: "PutMedia Success (StatType: ave)"
+         alias: "PutMedia Success (StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -243,7 +243,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMedia.Success"
-         alias: "GetMedia Success (StatType: ave)"
+         alias: "GetMedia Success (StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -283,7 +283,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMediaForFragmentList.Success"
-         alias: "GetMediaForFragmentList Success (StatType: ave)"
+         alias: "GetMediaForFragmentList Success (StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -315,7 +315,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSStreamingSessionURL.Success"
-         alias: "GetHLSStreamingSessionURL Success (StatType: ave)"
+         alias: "GetHLSStreamingSessionURL Success (StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -339,7 +339,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSMasterPlaylist.Success"
-         alias: "GetHLSMasterPlaylist Success (StatType: ave)"
+         alias: "GetHLSMasterPlaylist Success (StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -363,7 +363,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSMediaPlaylist.Success"
-         alias: "GetHLSMediaPlaylist Success (StatType: ave)"
+         alias: "GetHLSMediaPlaylist Success (StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -387,7 +387,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMP4InitFragment.Success"
-         alias: "GetMP4InitFragment Success (StatType: ave)"
+         alias: "GetMP4InitFragment Success (StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -411,7 +411,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMP4MediaFragment.Success"
-         alias: "GetMP4MediaFragment Success (StatType: ave)"
+         alias: "GetMP4MediaFragment Success (StatType - ave)"
          statType: "ave"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
