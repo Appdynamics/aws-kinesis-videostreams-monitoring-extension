@@ -22,4 +22,5 @@ package com.appdynamics.extensions.aws.kinesis.videostreams.util;
 public final class Constants {
     public static final String DEFAULT_METRIC_PREFIX = "Custom Metrics|AWS Kinesis Video Streams|";
     public static final String MONITOR_NAME = "KinesisVideoStreamsMonitor";
+    public static final String NAMESPACE = "AWS/KinesisVideo";
 }

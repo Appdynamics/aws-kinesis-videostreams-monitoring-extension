@@ -23,11 +23,12 @@
     <artifactId>aws-kinesis-videostreams-monitoring-extension</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
-    <name>AWS Kinesis Video Streams Monitoring Extension</name>
+    <name>AWS Kinesis Video Streams Monitor</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
-        <target.dir>${project.build.directory}/aws-kinesis-videostreams-monitoring-extension</target.dir>
+        <target.name>AWSKinesisVideoStreamsMonitor</target.name>
+        <target.dir>${project.build.directory}/${target.name}</target.dir>
     </properties>
 
     <dependencies>
@@ -132,7 +133,7 @@
                                     <fileset dir="${project.build.directory}" includes="${project.artifactId}.${project.packaging}"/>
                                 </copy>
                                 <zip destfile="${target.dir}-${project.version}.zip">
-                                    <zipfileset dir="${target.dir}" filemode="755" prefix="AWSKinesisVideoStreamsMonitoringExtension"/>
+                                    <zipfileset dir="${target.dir}" filemode="755" prefix="${target.name}"/>
                                 </zip>
                                 <delete dir="${target.dir}"/>
                             </target>

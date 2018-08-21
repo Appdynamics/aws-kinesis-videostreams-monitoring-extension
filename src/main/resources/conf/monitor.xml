@@ -14,21 +14,21 @@
   -->
 
 <monitor>
-    <name>AWS Kinesis Video Streams</name>
+    <name>AWS Kinesis Video Streams Monitor</name>
     <type>managed</type>
-    <description>AWS Kinesis Video Streams Monitoring Extension</description>
+    <description>Monitors AWS Kinesis Video Streams</description>
     <monitor-configuration></monitor-configuration>
     <monitor-run-task>
         <execution-style>periodic</execution-style>
         <execution-frequency-in-seconds>60</execution-frequency-in-seconds>
         <name>AWS Kinesis Video Streams Monitor Run Task</name>
-        <display-name>AWS Kinesis Video Streams Task</display-name>
-        <description>AWS Kinesis Video Streams Task</description>
+        <display-name>AWS Kinesis Video Streams Monitor Run Task</display-name>
+        <description>AWS Kinesis Video Streams Monitor Run Task</description>
         <type>java</type>
         <execution-timeout-in-secs>60</execution-timeout-in-secs>
         <task-arguments>
             <argument name="config-file" is-required="true" default-value=
-                    "monitors/AWSKinesisVideoStreamsMonitoringExtension/config.yml" />
+                    "monitors/AWSKinesisVideoStreamsMonitor/config.yml" />
         </task-arguments>
         <java-task>
             <classpath>aws-kinesis-videostreams-monitoring-extension.jar</classpath>

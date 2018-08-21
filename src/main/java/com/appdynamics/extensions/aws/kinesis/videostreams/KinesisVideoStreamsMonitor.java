@@ -32,7 +32,7 @@ public class KinesisVideoStreamsMonitor extends SingleNamespaceCloudwatchMonitor
 
     public KinesisVideoStreamsMonitor() {
         super(Configuration.class);
-        LOGGER.info(String.format("Using AWS KinesisVideoStreamsMonitor Monitor Version [%s]",
+        LOGGER.info(String.format("Using AWS Kinesis Video Streams Monitor Version [%s]",
                 this.getClass().getPackage().getImplementationTitle()));
     }
 

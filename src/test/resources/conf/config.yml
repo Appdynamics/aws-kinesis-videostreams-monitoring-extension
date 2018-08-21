@@ -46,6 +46,9 @@ concurrencyConfig:
 # Basic will fire CloudWatch API calls every 5 minutes
 # Detailed will fire CloudWatch API calls every 1 minutes
 cloudWatchMonitoring: "Basic"
+# If you want to run the extension with a further delay, comment the "cloudWatchMonitoring" above and use the following field
+# which takes in the number of minutes after which the extension should call the cloudwatch metrics
+#cloudWatchMonitoringInterval: 10
 
 regionEndPoints:
   us-east-1 : monitoring.us-east-1.amazonaws.com
@@ -83,7 +86,7 @@ metricsConfig:
     # AWS will charge for enhanced metrics emitted from Kinesis.
     includeMetrics:
        - name: "PutMedia.Requests"
-         alias: "PutMedia Requests (Unit - count; StatType - sum)"
+         alias: "PutMedia Requests per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -91,7 +94,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.IncomingBytes"
-         alias: "PutMedia IncomingBytes (Unit - byte; StatType - sum)"
+         alias: "PutMedia IncomingBytes per minute (Unit - byte; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -99,7 +102,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.IncomingFragments"
-         alias: "PutMedia IncomingFragments (Unit - count; StatType - sum)"
+         alias: "PutMedia IncomingFragments per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -107,7 +110,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.IncomingFrames"
-         alias: "PutMedia IncomingFrames (Unit - count; StatType - sum)"
+         alias: "PutMedia IncomingFrames per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -115,7 +118,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "PutMedia.ActiveConnections"
-         alias: "PutMedia ActiveConnections (Unit - count; StatType - sum)"
+         alias: "PutMedia ActiveConnections per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -195,7 +198,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMedia.Requests"
-         alias: "GetMedia Requests (Unit - count; StatType - sum)"
+         alias: "GetMedia Requests per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -203,7 +206,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMedia.OutgoingBytes"
-         alias: "GetMedia OutgoingBytes (Unit - byte; StatType - sum)"
+         alias: "GetMedia OutgoingBytes per minute (Unit - byte; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -211,7 +214,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMedia.OutgoingFragments"
-         alias: "GetMedia OutgoingFragments (Unit - count; StatType - sum)"
+         alias: "GetMedia OutgoingFragments per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -219,7 +222,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMedia.OutgoingFrames"
-         alias: "GetMedia.OutgoingFrames (Unit - count; StatType - sum)"
+         alias: "GetMedia.OutgoingFrames per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -230,7 +233,7 @@ metricsConfig:
          alias: "GetMedia MillisBehindNow (Unit - ms; StatType - max)"
          statType: "max"
          aggregationType: "AVERAGE"
-         timeRollUpType: "AVERAGE"
+         timeRollUpType: "CURRENT"
          clusterRollUpType: "INDIVIDUAL"
          delta: false
          multiplier: 1
@@ -251,7 +254,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMediaForFragmentList.OutgoingBytes"
-         alias: "GetMediaForFragmentList OutgoingBytes (Unit - byte; StatType - sum)"
+         alias: "GetMediaForFragmentList OutgoingBytes per minute (Unit - byte; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -259,7 +262,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMediaForFragmentList.Requests"
-         alias: "GetMediaForFragmentList Requests (Unit - count; StatType - sum)"
+         alias: "GetMediaForFragmentList Requests per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -267,7 +270,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMediaForFragmentList.OutgoingFragments"
-         alias: "GetMediaForFragmentList OutgoingFragments(Unit - count; StatType - sum)"
+         alias: "GetMediaForFragmentList OutgoingFragments per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -275,7 +278,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMediaForFragmentList.OutgoingFrames"
-         alias: "GetMediaForFragmentList OutgoingFrames (Unit - count; StatType - sum)"
+         alias: "GetMediaForFragmentList OutgoingFrames per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -307,7 +310,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSStreamingSessionURL.Requests"
-         alias: "GetHLSStreamingSessionURL Requests (Unit - count; StatType - sum)"
+         alias: "GetHLSStreamingSessionURL Requests per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -331,7 +334,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSMasterPlaylist.Requests"
-         alias: "GetHLSMasterPlaylist Requests (Unit - count; StatType - sum)"
+         alias: "GetHLSMasterPlaylist Requests per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -355,7 +358,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetHLSMediaPlaylist.Requests"
-         alias: "GetHLSMediaPlaylist Requests (Unit - count; StatType - sum)"
+         alias: "GetHLSMediaPlaylist Requests per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -379,7 +382,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMP4InitFragment.Requests"
-         alias: "GetMP4InitFragment Requests (Unit - count; StatType - sum)"
+         alias: "GetMP4InitFragment Requests per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -403,7 +406,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMP4MediaFragment.Requests"
-         alias: "GetMP4MediaFragment Requests (Unit - count; StatType - sum)"
+         alias: "GetMP4MediaFragment Requests per minute (Unit - count; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"
@@ -419,7 +422,7 @@ metricsConfig:
          delta: false
          multiplier: 1
        - name: "GetMP4MediaFragment.OutgoingBytes"
-         alias: "GetMP4MediaFragment Outgoing Bytes (Unit - byte; StatType - sum)"
+         alias: "GetMP4MediaFragment Outgoing Bytes per minute (Unit - byte; StatType - sum)"
          statType: "sum"
          aggregationType: "AVERAGE"
          timeRollUpType: "AVERAGE"

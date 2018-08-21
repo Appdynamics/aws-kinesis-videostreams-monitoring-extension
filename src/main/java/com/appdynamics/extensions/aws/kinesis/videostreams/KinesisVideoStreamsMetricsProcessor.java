@@ -26,7 +26,6 @@ import com.appdynamics.extensions.aws.metric.processors.MetricsProcessor;
 import com.appdynamics.extensions.aws.metric.processors.MetricsProcessorHelper;
 import com.appdynamics.extensions.aws.predicate.MultiDimensionPredicate;
 import com.appdynamics.extensions.metrics.Metric;
-import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,13 +33,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.LongAdder;
 
+import static com.appdynamics.extensions.aws.kinesis.videostreams.util.Constants.NAMESPACE;
+
 /**
  * Created by pradeep.nair on 8/7/18.
  */
 public class KinesisVideoStreamsMetricsProcessor implements MetricsProcessor {
 
-    private static final Logger LOGGER = Logger.getLogger(KinesisVideoStreamsMetricsProcessor.class);
-    private static final String NAMESPACE = "AWS/KinesisVideo";
     private List<IncludeMetric> includeMetrics;
     private List<Dimension> dimensions;
 
