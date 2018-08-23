@@ -85,7 +85,7 @@ public class KinesisVideoStreamsMetricsProcessorTest {
     }
 
     @Test
-    public void createMetricStatsMapForUploadTest() {
+    public void createMetricStatsMapAndCheckMetricPathHierarchyWithDimensionTest() {
         List<Metric> stats = kinesisVideoStreamsMetricsProcessor
                 .createMetricStatsMapForUpload(namespaceMetricStats);
         Metric metric = stats.get(0);
