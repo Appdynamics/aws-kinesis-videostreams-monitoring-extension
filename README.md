@@ -146,8 +146,8 @@ Always feel free to fork and contribute any changes directly here on [GitHub](ht
 ## Version
    |Name|Version|
    |--------------------------|------------|
-   |Extension Version         |1.0.3      |
+   |Extension Version         |1.0.4     |
    |Controller Compatibility  |4.4 or Later|
    |Agent Compatibility | Machine Agent 4.5.13 or later|
-   |Last Update               |09 Mar 2020 |
+   |Last Update               |07 May 2020 |
    |List of Changes           |[Change Log](https://github.com/Appdynamics/aws-kinesis-videostreams-monitoring-extension/blob/master/CHANGELOG.md)|
