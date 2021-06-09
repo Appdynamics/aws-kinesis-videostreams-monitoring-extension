@@ -1,4 +1,6 @@
 # AWS Kinesis Video Streams Monitoring Extension
+# 1.0.6
+* Updated the aws-cloudwatch-exts-commons from 2.2.4 to 2.2.5
 # 1.0.5
 * Updated the aws-cloudwatch-exts-commons from 2.2.3.1 to 2.2.4
 # 1.0.4
